@@ -60,43 +60,262 @@
 
 </head>
 <body>
-
-<section class="hero">
-  <div class="hero-body">
+  
+  <section class="section">
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title"></h1><h2 class = "title is-34 publication-title">Bimanual Dexterity for Complex Tasks</h2>
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block">
-              <a href = "https://sdflkajdsfl">Name1</a><sup></sup>&nbsp;&nbsp; 
-              <a href = "https://>Name 2</a><sup></sup>&nbsp;&nbsp;
-            </span>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                A University
-              </span>
+          </div>
+        </div>
+      </div>
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p style = "font-size: 20px">
+              To train generalist robot policies, machine learning methods often require an abundance of expert human data. A natural robot for humans to teleoperate is one that mimics themselves: bimanual arms and dexterous hands. However, building a bimanual teleoperation system for over 50DOF that accurately tracks both arms and hands is an extremely difficult problem. To address this, we introduce BiDex, an extremely dexterous, low-cost, low-latency and portable bimanual dexterous teleoperation system which relies on motion capture gloves and lightweight teacher arms. Our system is easy to use and can complete a variety of dexterous tasks in a natural intuitive manner, and enables collecting data training policies using imitation. We compare to two baseline approaches for data collection, using the Vision Pro teleoperation system and the SteamVR system. We also show BiDex operating a mobile bimanual robot for in the wild tasks. Please refer to https://bidex-teleop.github.io for more video results.          </p>
             </div>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                1234 conference
-              </span>
-              <h6 style = "font-size:14px">*denotes equal contribution</h6>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  
+    <!-- Paper video. -->
+    <!--/ Paper video. -->
+    <!-- <h2 class="title is-2" style="text-align: center;">Individual Results</h2>
+    <br> -->
+  </section>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+            <h4 class = "title is-34 publication-title">Autonomous Results</h4>
+            <button id = "auto_button" type = "button" class="btn btn-primary btn-lg" onclick="play_auto()">Play Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="a_1" class="center" playsinline controls loop muted src="./resources/1/bimanual_serve.mp4" width="100%" preload="metadata"
+                         style="border-radius:10px; "></video>
+                         <center><h5>Serving</h5></center>
+                  <video id="a_2" class="center" playsinline controls loop muted src="./resources/1/drill1.mp4" width="100%" preload="metadata"
+                         style="border-radius:10px; "></video>
+                         <center><h5>Drill Operating</h5></center>
+              </div>
+              <div class="col">
+                        <video id="a_3" class="center" playsinline controls loop muted src="./resources/1/mobile_pour.mp4" width="100%" preload="metadata"
+                         style="border-radius:10px; "></video>
+                         <center><h5>Pouring in the wild</h5></center>
+                         <video id="a_4" class="center" playsinline controls loop muted src="./resources/1/plate2.mp4" width="100%" preload="metadata"
+                         style="border-radius:10px; "></video>
+                         <center><h5>Plate Pickup</h5></center>
+              </div>
+              <div class="col">
+                    <video id="a_5" class="center" playsinline controls loop muted src="./resources/1/pour.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Pouring</h5></center>
+                    <video id="a_6" class="center" playsinline controls loop muted src="./resources/1/wire1.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Wire Winding</h5></center>
+              </div>
             </div>
-          </div> -->
-<!-- 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a target="_blank" href="http://"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div> -->
+            <br><br>
+            <h4 class = "title is-34 publication-title">Teleoperation Results</h4>
+            <button id = "button_first_nine" type = "button" class="btn btn-primary btn-lg" onclick="first_nine()">Play First 9 Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="t_1" class="center" playsinline controls loop muted src="./resources/2/bonus_rearrangement.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Table Rearragement</h5></center>
+                  <video id="t_2" class="center" playsinline controls loop muted src="./resources/2/card.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Card Pickup</h5></center>
+                  <video id="t_3" class="center" playsinline controls loop muted src="./resources/2/dining_bimanual_place.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Dining Rearrangement</h5></center>
+              </div>
+              <div class="col">
+                  <video id="t_4" class="center" playsinline controls loop muted src="./resources/2/dining_chopstick.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Chopstick Pickup</h5></center>
+                    <video id="t_5" class="center" playsinline controls loop muted src="./resources/2/dining_pick_grape.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Grape Plucking</h5></center>
+                    <video id="t_6" class="center" playsinline controls loop muted src="./resources/2/dining_pour_chip.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Pour Chips</h5></center>
+              </div>
+              <div class="col">
+                    <video id="t_7" class="center" playsinline controls loop muted src="./resources/2/dining_scoop_and_pour.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Scoop and Pour</h5></center>
+                    <video id="t_8" class="center" playsinline controls loop muted src="./resources/2/dining_stack_bowl.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Stack Bowl</h5></center>
+                    <video id="t_9" class="center" playsinline controls loop muted src="./resources/2/dining_stack_cups.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Stack Cups</h5></center>
+              </div>
+            </div>
+            <br><br>
+            <button id = "button_next_nine" type = "button" class="btn btn-primary btn-lg" onclick="next_nine()">Play Next 9 Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="t_10" class="center" playsinline controls loop muted src="./resources/2/dining_stack_plate.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Stack Plate</h5></center>
+                  <video id="t_11" class="center" playsinline controls loop muted src="./resources/2/kitchen_brush_insert.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Insert Brush</h5></center>
+                  <video id="t_12" class="center" playsinline controls loop muted src="./resources/2/kitchen_cut.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Cut Cucumber</h5></center>
+              </div>
+              <div class="col">
+                  <video id="t_13" class="center" playsinline controls loop muted src="./resources/2/kitchen_peel.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Peel Cucumber</h5></center>
+                    <video id="t_14" class="center" playsinline controls loop muted src="./resources/2/kitchen_pour.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Pouring</h5></center>
+                    <video id="t_15" class="center" playsinline controls loop muted src="./resources/2/kitchen_spatula.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Mix with Spatula</h5></center>
+              </div>
+              <div class="col">
+                    <video id="t_16" class="center" playsinline controls loop muted src="./resources/2/kitchen_spray_and_brush.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Spray and Clean with Brush</h5></center>
+                    <video id="t_17" class="center" playsinline controls loop muted src="./resources/2/kitchen_whisk.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Whisking</h5></center>
+                    <video id="t_18" class="center" playsinline controls loop muted src="./resources/2/tool_stapler.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Use Stapler</h5></center>
+              </div>
+            </div>
+            <br><br>
+            <button id = "button_last_eight" type = "button" class="btn btn-primary btn-lg" onclick="last_eight()">Play Last 8 Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="t_19" class="center" playsinline controls loop muted src="./resources/2/tool_screwdriver.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Screwdriver Pickup</h5></center>
+                  <video id="t_20" class="center" playsinline controls loop muted src="./resources/2/tool_bin.mp4" width="100%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Tool Cleanup</h5></center>
+              </div>
+              <div class="col">
+                  <video id="t_21" class="center" playsinline controls loop muted src="./resources/2/tool_drill.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Use Drill</h5></center>
+                    <video id="t_22" class="center" playsinline controls loop muted src="./resources/2/tool_hammer.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Hammering Dough</h5></center>
+              </div>
+              <div class="col">
+                    <video id="t_23" class="center" playsinline controls loop muted src="./resources/2/tool_melter.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Rearrange and Insert Soldering Iron</h5></center>
+                    <video id="t_24" class="center" playsinline controls loop muted src="./resources/2/tool_curl_wire.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Wire Winding</h5></center>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <video id="t_25" class="center" playsinline controls loop muted src="./resources/2/laundry_hanger.mp4" width="60%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Hang Shirt</h5></center>
+              </div>
+              <div class="col">
+                  <video id="t_26" class="center" playsinline controls loop muted src="./resources/2/laundry_fold_shirt.mp4" width="60%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Fold Shirt</h5></center>
+              </div>
+            </div>
+
+
+            <h4 class = "title is-34 publication-title">Teleoperation with Operator</h4>
+            <button id = "button_operator" type = "button" class="btn btn-primary btn-lg" onclick="operator()">Play Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="to_1" class="center" playsinline controls loop muted src="./resources/3/operator_tabletop_1.mp4" width="100%" preload="metadata"
+                         style="border-radius:10px; "></video>
+                         <center><h5>Stack Plate</h5></center>
+              </div>
+              <div class="col">
+                        <video id="to_2" class="center" playsinline controls loop muted src="./resources/3/operator_tabletop_2.mp4" width="100%" preload="metadata"
+                         style="border-radius:10px; "></video>
+                         <center><h5>Stack Bowl</h5></center>
+              </div>
+              <div class="col">
+                    <video id="to_3" class="center" playsinline controls loop muted src="./resources/3/operator_tabletop_3.mp4" width="100%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Grape Plucking</h5></center>
+              </div>
+            </div>
+            <br><br>
+
+
+            <h4 class = "title is-34 publication-title">Mobile Teleoperation</h4>
+            <button id = "button_mobile" type = "button" class="btn btn-primary btn-lg" onclick="mobile()">Play Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="mo_1" class="center" playsinline controls loop muted src="./resources/4/box_transporting_operator.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Operator View of Box Transport</h5></center>
+                  <video id="mo_2" class="center" playsinline controls loop muted src="./resources/4/clear_trash.mp4" width="90%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Clear Trash</h5></center>
+              </div>
+              <div class="col">
+                <video id="mo_3" class="center" playsinline controls loop muted src="./resources/4/box_transporting_2.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Box Transport</h5></center>
+                  
+                    <video id="mo_4" class="center" playsinline controls loop muted src="./resources/4/push_chair.mp4" width="90%" preload="metadata"
+                    style="border-radius:10px; "></video>
+                    <center><h5>Push Chair</h5></center>
+              </div>
+            </div>
+            <br><br>
+
+            <h4 class = "title is-34 publication-title">LEAP Hand v1 Autonomous</h4>
+            <button id = "button_v_one" type = "button" class="btn btn-primary btn-lg" onclick="v_one()">Play Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="LEAP_one_1" class="center" playsinline controls loop muted src="./resources/5/pour_1.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Pouring</h5></center>
+              </div>
+              <div class="col">
+                  <video id="LEAP_one_2" class="center" playsinline controls loop muted src="./resources/5/pringles.mp4" width="90%" preload="metadata"
+                      style="border-radius:10px; "></video>
+                      <center><h5>Pringles (Dyanmic)</h5></center>
+              </div>
+                  <div class="col">
+                    <video id="LEAP_one_3" class="center" playsinline controls loop muted src="./resources/5/stack_cup.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Stack Cup</h5></center>
+                </div>
+                  <!-- <video id="LEAP_one_4" class="center" playsinline controls loop muted src="./resources/5/pour_2.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Pouring 2</h5></center>
+                  </div> -->
+                  
+              </div>
+            </div>
+            <br><br>
           </div>
         </div>
       </div>
@@ -104,35 +323,15 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="content has-text-centered">
       <video width="960" height="720" loop muted controls picture-in-picture id="teaser">
         <source src="./resources/supplemental_corl.mp4" type="video/mp4" >
       </video>
     </div>
-</section>
+</section> -->
 
-<section class="section">
-  <div class="container">
 
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p style = "font-size: 20px">
-            To train generalist robot policies, machine learning methods often require an abundance of expert human data. A natural robot for humans to teleoperate is one that mimics themselves: bimanual arms and dexterous hands. However, building a bimanual teleoperation system for over 50DOF that accurately tracks both arms and hands is an extremely difficult problem. To address this, we introduce BiDex, an extremely dexterous, low-cost, low-latency and portable bimanual dexterous teleoperation system which relies on motion capture gloves and lightweight teacher arms. Our system is easy to use and can complete a variety of dexterous tasks in a natural intuitive manner, and enables collecting data training policies using imitation. We compare to two baseline approaches for data collection, using the Vision Pro teleoperation system and the SteamVR system. We also show BiDex operating a mobile bimanual robot for in the wild tasks. Please refer to https://bidex-teleop.github.io for more video results.          </p>
-          </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Abstract. -->
-
-  <!-- Paper video. -->
-  <!--/ Paper video. -->
-  <!-- <h2 class="title is-2" style="text-align: center;">Individual Results</h2>
-  <br> -->
-</section>
 
 <footer class="footer">
   <div class="container">
@@ -152,12 +351,120 @@
   var mainLoopId = setInterval(function(){
     $('video').not('#teaser').each(function(){
   if ($(this).is(":in-viewport")) {
-      $(this)[0].play();
+      // $(this)[0].play();
   } else {
       $(this)[0].pause();
   }
   })
 },200);
+</script>
+
+<script>
+
+function play_list_videos(list_videos){
+  for (let i = 0; i < list_videos.length; i++) {
+    var x = document.getElementById(list_videos[i]);
+    x.play()
+  }
+}
+
+function pause_list_videos(list_videos){
+  for (let i = 0; i < list_videos.length; i++) {
+    var x = document.getElementById(list_videos[i]);
+    x.pause()
+  }
+}
+
+function play_auto() {
+  var elem = document.getElementById("auto_button");
+  
+    if (elem.textContent=="Play Videos"){
+      elem.textContent = "Pause Videos";
+      play_list_videos(["a_1" , "a_2", "a_3", "a_4", "a_5", "a_6"]);
+    } 
+    else {
+      elem.textContent = "Play Videos";
+      pause_list_videos(["a_1" , "a_2", "a_3", "a_4", "a_5", "a_6"]);
+    }
+}
+
+function first_nine() {
+  var elem = document.getElementById("button_first_nine");
+  
+    if (elem.textContent=="Pause First 9 Videos"){
+      elem.textContent = "Play First 9 Videos";
+      pause_list_videos(["t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8", "t_9"]);
+    } 
+    else {
+      elem.textContent = "Pause First 9 Videos";
+      play_list_videos(["t_1", "t_2", "t_3", "t_4", "t_5", "t_6", "t_7", "t_8", "t_9"]);
+    }
+}
+
+function next_nine() {
+  var elem = document.getElementById("button_next_nine");
+  
+    if (elem.textContent=="Pause Next 9 Videos"){
+      elem.textContent = "Play Next 9 Videos";
+      pause_list_videos(["t_10", "t_11", "t_12", "t_13", "t_14", "t_15", "t_16", "t_17", "t_18"]);
+    } 
+    else {
+      elem.textContent = "Pause Next 9 Videos";
+      play_list_videos(["t_10", "t_11", "t_12", "t_13", "t_14", "t_15", "t_16", "t_17", "t_18"]);
+    }
+}
+
+function last_eight() {
+  var elem = document.getElementById("button_last_eight");
+  
+    if (elem.textContent=="Pause Last 8 Videos"){
+      elem.textContent = "Play Last 8 Videos";
+      pause_list_videos(["t_19", "t_20", "t_21", "t_22", "t_23", "t_24", "t_25", "t_26", "t_27"]);
+    } 
+    else {
+      elem.textContent = "Pause Last 8 Videos";
+      play_list_videos(["t_19", "t_20", "t_21", "t_22", "t_23", "t_24", "t_25", "t_26", "t_27"]);
+    }
+}
+
+
+function operator() {
+  var elem = document.getElementById("button_operator");
+  
+    if (elem.textContent=="Pause Videos"){
+      elem.textContent = "Play Videos";
+      pause_list_videos(["to_1", "to_2", "to_3"]);
+    } 
+    else {
+      elem.textContent = "Pause Videos";
+      play_list_videos(["to_1", "to_2", "to_3"]);
+    }
+}
+
+function mobile(){
+  var elem = document.getElementById("button_mobile");
+  
+  if (elem.textContent=="Pause Videos"){
+    elem.textContent = "Play Videos";
+    pause_list_videos(["mo_1", "mo_2", "mo_3", "mo_4"]);
+  } 
+  else {
+    elem.textContent = "Pause Videos";
+    play_list_videos(["mo_1", "mo_2", "mo_3", "mo_4"]);
+  }
+}
+
+function v_one(){
+  var elem = document.getElementById("button_v_one");
+  if (elem.textContent=="Pause Videos"){
+    elem.textContent = "Play Videos";
+    pause_list_videos(["LEAP_one_1", "LEAP_one_2", "LEAP_one_3"]);
+  } 
+  else {
+    elem.textContent = "Pause Videos";
+    play_list_videos(["LEAP_one_1", "LEAP_one_2", "LEAP_one_3"]);
+  }
+}
 </script>
 </body>
 </html>
