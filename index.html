@@ -334,8 +334,31 @@
                   </div> -->
                   
               </div>
-            </div>
+              <br><br>
+
+
+
+
+              <h4 class = "title is-34 publication-title">Apple Vision Pro vs Ours</h4>
+            <button id = "button_avp" type = "button" class="btn btn-primary btn-lg" onclick="avp()">Play Videos</button>
             <br><br>
+            <div class="row">
+              <div class="col">
+                  <video id="avp_1" class="center" playsinline controls loop muted src="./resources/6/avp_shaky_rollout.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Vision Pro Autonomous Rollout</h5></center>
+                  <br>
+              </div>
+              <div class="col">
+                <video id="avp_2" class="center" playsinline controls loop muted src="./resources/6/bidex_rollout.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Ours Autonomous Rollout</h5></center>
+                  <br>
+              </div>
+            </div>      
+            <h5 class = "">We compare the autonomous rollouts of AVP and ours.  We will have more videos that show operator comfort in the camera ready.</h5>
+            <br><br>
+            </div>
           </div>
         </div>
       </div>
@@ -483,6 +506,18 @@ function v_one(){
   else {
     elem.textContent = "Pause Videos";
     play_list_videos(["LEAP_one_1", "LEAP_one_2", "LEAP_one_3"]);
+  }
+}
+
+function avp(){
+  var elem = document.getElementById("button_avp");
+  if (elem.textContent=="Pause Videos"){
+    elem.textContent = "Play Videos";
+    pause_list_videos(["avp_1", "avp_2"]);
+  } 
+  else {
+    elem.textContent = "Pause Videos";
+    play_list_videos(["avp_1", "avp_2"]);
   }
 }
 </script>
