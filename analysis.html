@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Bidex: Bimanual Dexterity for Complex Tasks">
+  <meta name="keywords" content="Soft Robotics, Robotics, Dexterous Manipuation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:site_name" content="Bimanual Dexterity for Complex Tasks" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Bimanual Dexterity for Complex Tasks" />
+  <meta property="og:description" content="Bimanual Dexterity for Complex Tasks" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="./resources/teaser.png" />
+  <meta property="og:image:secure" content="./resources/teaser.png" />
+  <meta property="og:video" content="./resources/compressed.mp4" />
+  <meta property="og:video:secure" content="./resources/compressed.mp4" />
+
+  <meta property="article:publisher" content="/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bimanual Dexterity for Complex Tasks" />
+  <meta name="twitter:url" content="/" />
+  <meta name="twitter:image" content="./resources/teaser.png" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="./resources/teaser.png" />
+  <meta name="twitter:player" content="" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+
+  <title>Bimanual Dexterity for Complex Tasks</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="./resources/crop_method.png" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+
+</head>
+<body>
+  <style>
+    .nav-item
+    {
+      font-size: 25px;
+      
+    }
+    .navbar-nav .nav-link {
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+    </style>    
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BCD5FA;"> 
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Collapsible wrapper -->
+      <div
+        class="navbar-collapse justify-content-center"
+        id="navbarCenteredExample"
+      >
+        <!-- Left links -->
+        <ul class="navbar-nav mb-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./analysis" >Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assembly" >Assembly</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/leap-hand/LEAP_Hand_API" target="_blank">Software</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+
+  
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h4 class = "title is-34 publication-title">Apple Vision Pro vs Ours</h4>
+            <button id = "button_avp" type = "button" class="btn btn-primary btn-lg" onclick="avp()">Play Videos</button>
+            <br><br>
+            <div class="row">
+              <div class="col">
+                <video id="avp_3" class="center" playsinline controls loop muted src="./resources/figures/output_avp_teleop.mp4" width="45%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Vision Pro Teleoperation</h5></center>
+              </div>
+              <h5 class = "">The teleoperation of Vision Pro exhibits some jitteriness in arm movement and reduced accuracy in finger control.</h5>
+
+            </div>  
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video id="avp_1" class="center" playsinline controls loop muted src="./resources/6/avp_shaky_rollout.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Vision Pro Autonomous Rollout</h5></center>
+                  <br>
+              </div>
+              <div class="col">
+                <video id="avp_2" class="center" playsinline controls loop muted src="./resources/6/bidex_rollout.mp4" width="90%" preload="metadata"
+                  style="border-radius:10px; "></video>
+                  <center><h5>Ours Autonomous Rollout</h5></center>
+                  <br>
+              </div>  
+            </div>    
+            <h5 class = "">Vision Pro produces more shaky actions on policy rollout due to the less accurate nature of vision-based teleoperation data and the use of end-effector control instead of joint control for the arm.</h5>
+            <br>
+            <img src="./resources/figures/bc_comparison.png" alt="Comparison" width="50%">
+            <h5 class = "">Policy Performance with varying number of demonstrations collected with Bidex and the Apple Vision Pro.  We find that ours requires less data which can be collected at a faster rate to reach the same level of behavior cloning policy performance.
+            </h5>
+            <br><br>
+
+            <h4 class = "title is-34 publication-title">Imitation Learning</h4>
+            <img src="./resources/figures/bc_architecture-1.png" alt="Architecture" width="70%">
+            <h5 class = "">We train ACT from ALOHA using data collected by Bidex and find that our system can perform well even in this 44 dimension action space.  This demonstrates that our robot data is high quality for training robot policies.
+            </h5>
+            <div class="row">
+              <div class="col">
+                <img src="./resources/figures/leapv1_table.png" alt="LEAP v1 Results" width="90%">
+              </div>
+              <div class="col">
+                <img src="./resources/figures/leapv2_table.png" alt="LEAP v2 Results" width="90%">
+              </div>  
+            </div>  
+            <br><br>
+            <h4 class = "title is-34 publication-title">User Study</h4>
+            <img src="./resources/figures/user_study.png" alt="Comparison" width="70%">
+            </h5>
+            <br><br>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- <section class="hero teaser">
+  <div class="content has-text-centered">
+      <video width="960" height="720" loop muted controls picture-in-picture id="teaser">
+        <source src="./resources/supplemental_corl.mp4" type="video/mp4" >
+      </video>
+    </div>
+</section> -->
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a href="./resources/CoRL-Energy-Locomotion.pdf" class="large-font bottom_buttons">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <!-- <a class="large-font bottom_buttons" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      <br />
+      <p>Page template borrowed from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  var mainLoopId = setInterval(function(){
+    $('video').not('#teaser').each(function(){
+  if ($(this).is(":in-viewport")) {
+      // $(this)[0].play();
+  } else {
+      $(this)[0].pause();
+  }
+  })
+},200);
+</script>
+
+<script>
+
+function play_list_videos(list_videos){
+  for (let i = 0; i < list_videos.length; i++) {
+    var x = document.getElementById(list_videos[i]);
+    x.play()
+  }
+}
+
+function pause_list_videos(list_videos){
+  for (let i = 0; i < list_videos.length; i++) {
+    var x = document.getElementById(list_videos[i]);
+    x.pause()
+  }
+}
+
+function avp(){
+  var elem = document.getElementById("button_avp");
+  if (elem.textContent=="Pause Videos"){
+    elem.textContent = "Play Videos";
+    pause_list_videos(["avp_1", "avp_2", "avp_3"]);
+  } 
+  else {
+    elem.textContent = "Pause Videos";
+    play_list_videos(["avp_1", "avp_2", "avp_3"]);
+  }
+}
+</script>
+</body>
+</html>

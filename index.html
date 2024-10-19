@@ -60,36 +60,129 @@
 
 </head>
 <body>
+  <style>
+    .nav-item
+    {
+      font-size: 25px;
+      
+    }
+    .navbar-nav .nav-link {
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+    </style>    
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BCD5FA;"> 
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Collapsible wrapper -->
+      <div
+        class="navbar-collapse justify-content-center"
+        id="navbarCenteredExample"
+      >
+        <!-- Left links -->
+        <ul class="navbar-nav mb-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./analysis">Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./assembly">Assembly</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/leap-hand/LEAP_Hand_API" target="_blank">Software</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+
   
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"></h1><h2 class = "title is-34 publication-title">Bimanual Dexterity for Complex Tasks</h2>
+          <h1 class="title is-2 publication-title">Bimanual Dexterity for Complex Tasks</h1>
           <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://kennyshaw.net/">Kenneth Shaw*</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://yulongli42.github.io/">Yulong Li*</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+              <a href="https://jim-young6709.github.io/">Jiahui Yang</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.mohansrirama.com/">Mohan Kumar Srirama</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Ray Liu</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://haoyu-x.github.io/">Haoyu Xiong</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+              <a href="https://russellmendonca.github.io/">Russell Mendonca&dagger;</a><sup></sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak&dagger;</a><sup></sup>
+              <br /><sup></sup>Carnegie Mellon University<br />
+
+              <h6>*Equal contribution.  &dagger;Equal Advising.</h6>
+            <span>CoRL 2024</span>
+          </div>
           </div>
         </div>
       </div>
+      <div class="column has-text-centered">
+        <div class="publication-links">
+          <div class="column has-text-centered">
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+              <a href="https://openreview.net/pdf?id=55tYfHvanf"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>CoRL 2024</span>
+              </a>
+            </span>
+
+            <!-- arXiv Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://arxiv.org/abs/2309.06440"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span> -->
+            <!-- <span class="link-block">
+              <a href="./static/leap_hand_poster.pdf"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Poster</span>
+              </a>
+            </span> -->
+            <!-- twitter Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://twitter.com/pathak2206/status/1705277626577780875"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                </span>
+                <span>Summary</span>
+              </a>
+            </span> -->
+          </div>
+        </div>
+        </div>
       <!-- Abstract. -->
-      <!-- <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds">
-          <h2 class="title is-2">Abstract</h2>
+          <h4 class="title is-34 publication-title">Abstract</h4>
           <div class="content has-text-justified">
             <p style = "font-size: 20px">
-              To train generalist robot policies, machine learning methods often require an abundance of expert human data. A natural robot for humans to teleoperate is one that mimics themselves: bimanual arms and dexterous hands. However, building a bimanual teleoperation system for over 50DOF that accurately tracks both arms and hands is an extremely difficult problem. To address this, we introduce BiDex, an extremely dexterous, low-cost, low-latency and portable bimanual dexterous teleoperation system which relies on motion capture gloves and lightweight teacher arms. Our system is easy to use and can complete a variety of dexterous tasks in a natural intuitive manner, and enables collecting data training policies using imitation. We compare to two baseline approaches for data collection, using the Vision Pro teleoperation system and the SteamVR system. We also show BiDex operating a mobile bimanual robot for in the wild tasks. Please refer to https://bidex-teleop.github.io for more video results.          </p>
-            </div>
+              To train generalist robot policies, machine learning methods often require a substantial amount of expert human teleoperation data. An ideal robot for humans collecting data is one that closely mimics them: bimanual arms and dexterous hands. However, creating such a bimanual teleoperation system with over 50 DoF is a significant challenge. To address this, we introduce Bidex, an extremely dexterous, low-cost, low-latency and portable bimanual dexterous teleoperation system which relies on motion capture gloves and teacher arms. We compare Bidex to a Vision Pro teleoperation system and a SteamVR system and find Bidex to produce better quality data for more complex tasks at a faster rate. Additionally, we show Bidex operating a mobile bimanual robot for in the wild tasks. The robot hands (5k USD) and teleoperation system (7k USD) is readily reproducible and can be used on many robot arms including two xArms ($16k USD).</div>
         </div>
-      </div> -->
+      </div>
     </div>
-    <!--/ Abstract. -->
-  
-    <!-- Paper video. -->
-    <!--/ Paper video. -->
-    <!-- <h2 class="title is-2" style="text-align: center;">Individual Results</h2>
-    <br> -->
-  </section>
-<section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding-top: 0px;">
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -334,31 +427,6 @@
                   </div> -->
                   
               </div>
-              <br><br>
-
-
-
-
-              <h4 class = "title is-34 publication-title">Apple Vision Pro vs Ours</h4>
-            <button id = "button_avp" type = "button" class="btn btn-primary btn-lg" onclick="avp()">Play Videos</button>
-            <br><br>
-            <div class="row">
-              <div class="col">
-                  <video id="avp_1" class="center" playsinline controls loop muted src="./resources/6/avp_shaky_rollout.mp4" width="90%" preload="metadata"
-                  style="border-radius:10px; "></video>
-                  <center><h5>Vision Pro Autonomous Rollout</h5></center>
-                  <br>
-              </div>
-              <div class="col">
-                <video id="avp_2" class="center" playsinline controls loop muted src="./resources/6/bidex_rollout.mp4" width="90%" preload="metadata"
-                  style="border-radius:10px; "></video>
-                  <center><h5>Ours Autonomous Rollout</h5></center>
-                  <br>
-              </div>
-            </div>      
-            <h5 class = "">We compare the autonomous rollouts of AVP and ours.  Vision Pro produces more shaky actions on policy rollout due to its use of end-effector control instead of joint control. We will have more videos that show operator comfort in the camera ready.</h5>
-            <br><br>
-            </div>
           </div>
         </div>
       </div>
@@ -374,6 +442,36 @@
     </div>
 </section> -->
 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{shaw2024bimanual,
+      title={Bimanual Dexterity for Complex Tasks},
+      author={Shaw, Kenneth and Li, Yulong and Yang, Jiahui and Srirama, Mohan Kumar and Liu, Ray and Xiong, Haoyu and Mendonca, Russell and Pathak, Deepak},
+      booktitle={8th Annual Conference on Robot Learning},
+      year={2024}
+    }</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Ack">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    We thank Ankur Handa, Arthur Allshire, Toru Lin and Nancy Pollard for discussions about the paper.
+We also thank Maarten Witteveen and Sarah Shaban at Manus Meta for their assistance on their
+gloves. We thank Diya Dinesh and Lukas Kebuladze for helping with teleoperation. This work
+is supported in part by DARPA Machine Commonsense grant, AFOSR FA9550-23-1-0747, ONR
+N00014-22-1-2096, AIST CMU grant and Google Research Award.
+<br><br>
+<div class = "row">
+  <div class="col" style="text-align: center;">
+    <a href= "https://www.manus-meta.com/">
+      <img src="./resources/figures/powered_by_manus.png" alt="Powered by Manus"  width="25%" >
+    </a>
+  </div>
+</div>
+</div>
+</section>
 
 
 <footer class="footer">
